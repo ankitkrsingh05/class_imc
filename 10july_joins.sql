@@ -104,14 +104,14 @@ join departments d
 on e.department_id = d.department_id
 group by d.department_id,d.department_name
 -- 6 -Retrieve the count of employees in each department,
---including departments with no employees.
-select d.department_name,count(*)
+-- including departments with no employees.
+select d.department_name,count(distinct e.employee_id)
 from employees e
 right join departments d
 on e.department_id = d.department_id
 group by d.department_id,d.department_name
 -- 7- Retrieve the total salary expenditure for 
--- each department where the total expenditure is greater than 100,000, 
+-- each department where the total expenditure is greater than 100,00
 -- listing the department name and total salary.
 select d.department_name,sum(e.salary) total_expediture
 from employees e
@@ -120,15 +120,3 @@ on e.department_id = d.department_id
 group by d.department_id,d.department_name
 having sum(e.salary) > 10000
 
-
-
-
--- get the list of employees with their salaries and their rank within their department based on salary.
--- dense rank
--- number the employees ordered by their name in each department
-
--- get the top 5 salaried employees
--- get the 3rd highest salaried employee from  each department,
--- get the 4th employee from each department sorted by name
--- get chanage in salary over the dates for each dept
--- get the change in salary over the days
