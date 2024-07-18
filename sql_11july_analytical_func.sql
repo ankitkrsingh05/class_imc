@@ -96,7 +96,7 @@ order by t1.value
 
 -- for each of the joins write the total number of records you would get
 
--- Analytical functions
+-- Analytical functions - windowing functions
 -- cte
 
 -- get the list of employees with their salaries and 
@@ -156,15 +156,9 @@ from employees
 where department_id = 6
 order by first_name
 
--- get the top 3 salaried employees from each department
-
--- get the 3rd highest salaried employee from  each department,
-
--- get the 2nd employee from each department sorted by name
-
--- get chanage in salary over the dates for each dept
-select employee_id,hire_date,department_id,salary,salary - lag(salary) over (partition by department_id order by hire_date)
-from employees
+select employee_id,first_name,hire_date,
+department_id,salary,
+avg(salary) over (partition by department_id order by salary desc) as avg_salary
+from employees e
 where department_id = 6
-order by department_id
-
+order by salary desc

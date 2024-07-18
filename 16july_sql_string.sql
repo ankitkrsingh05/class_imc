@@ -66,6 +66,7 @@ SELECT ARRAY_TO_STRING(ARRAY['one', 'two', 'three'], ',') AS array_string;
 -- 22. FORMAT: Format a string
 SELECT FORMAT('Hello, %s!', 'World') AS formatted_string;
 
+
 -- 23. LEFT: Get a substring from the left
 SELECT LEFT('PostgreSQL', 4) AS left_substring;
 
