@@ -1,8 +1,21 @@
-# class_imc
+**Class Materials: Python and SQL**
+This repository contains all the code, queries, and resources we have read for the course.
 
-# SQL
+**Getting Started**
+Prerequisites
+Before you begin, ensure you have the following installed:
 
-# Classes completed:
+Python 3.x
+PostgreSQL or any other SQL database
+Anaconda or virtual environment for Python (optional but recommended)
+_**Installation**_
+Clone the repository:
+git clone https://github.com/ankitkrsingh05/class_imc.git
+cd class_imc
+Set up a virtual environment (optional but recommended):
+python -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+Install required Python packages:
 
-8 july: 
-9 july:
+**For fetching the latest updates**
+git pull
